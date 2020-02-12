@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Under Armor Test - Goldie Young</title>
+    
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+   
+  <style>
+  body {
+    font-family: Arial;
+  }
+  .button {
+    padding: 5px;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(221,221,221,1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(221,221,221,1);
+    box-shadow: 5px 5px 5px 0px rgba(221,221,221,1);
+  }
+  .button:hover {
+    box-shadow : none;
+  }
+  .row {
+    margin: 10px 20px;
+    max-width: 500px;
+    padding: 20px;
+    font-size: 1.2em;
+    border: 1px solid grey;
+  }
+  
+  </style>
+
+  </head>
+  <body>
+    <div class="buttons">
+      <span class="button" id="hello">Create Rows saying Hello</span>
+      <span class="button" id="goodbye">Create Rows saying Goodbye</span>
+    </div>
+    <div id="rows">
+      
+    </div>
+    
+    <script>
+      // Create rows function
+      function createRows(text) {
+        var rows = document.getElementById("rows");
+        var html = "<div class='row'>" + text + "</div>"
+        rows.innerHTML = html + html + html + html + html;
+      }
+      document.getElementById("hello")
+        .addEventListener("click", function() {createRows("Hello")});
+      document.getElementById("goodbye")
+        .addEventListener("click", function() {createRows("Goodbye")});
+    </script>
+  </body>
+</html>
